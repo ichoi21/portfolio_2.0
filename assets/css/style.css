@@ -1,0 +1,26 @@
+body {
+  position: relative;
+  background-color: rgb(164, 166, 168);
+}
+#logo {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 200;
+  background-color: rgb(218, 16, 16);
+  color: white;
+  width: 40px;
+}
+
+#nav-links,
+#footer-container,
+.contact-info,
+.navigation-info,
+.about-me-info {
+  font-size: 14px;
+}
+
+.nav-link,
+.contact-info,
+.navigation-info,
+.about-me-info {
+  color: black;
+}
