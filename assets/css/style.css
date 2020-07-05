@@ -24,3 +24,23 @@ body {
 .about-me-info {
   color: black;
 }
+
+.contact-link {
+  font-family: "Work Sans", sans-serif;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 3.5rem;
+  background-color: black;
+  box-shadow: 0 10px 10px 0 rgba(34, 68, 54, 0.37);
+}
+.contact-logo {
+  font-family: "Work Sans", sans-serif;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 4rem;
+  box-shadow: 0 10px 10px 0 rgba(34, 68, 54, 0.37);
+}
