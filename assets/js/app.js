@@ -2,7 +2,7 @@ $(document).ready(function () {
   //header
   $("header").append(
     `    
-  <div class="container pb-5" id="nav-container">
+  <div class="container pb-5 fixed-top" id="nav-container">
   <nav
     class="navbar navbar-light justify-content-md-between justify-content-center shadow-lg"
     id="top-nav">
@@ -10,9 +10,10 @@ $(document).ready(function () {
       href="github.io/ichoi21/portfolio_2.0"
       id="logo">IC</a>
 
+
     <ul class="nav flex-nowrap" id="nav-links">
       <li class="nav-item">
-        <a class="nav-link" href="#411">About</a>
+        <a class="nav-link" href="#about">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -21,22 +22,19 @@ $(document).ready(function () {
         <a class="nav-link" href="#contact">Contact</a>
       </li>
       <li class="nav-item" id="dynamic-time">
-      <a class="nav-link" href="#">TIME</a>
       </li>
     </ul>
   </nav>
   `
   );
-  //main
-  $("main").append(
-    `
-  <div class="container" id="nav-container">
-  <h4 class="text-center fixed-center">
-  2.0 Coming to a Browser Near You.
-  </h4>
-  </div>
-  `
-  );
+
+  var autoTime = function () {
+    var currentDT = moment().format("llll");
+    $("#dynamic-time").html(currentDT);
+  };
+  autoTime();
+  setInterval(autoTime, 1000);
+
   // footer
   $("footer").append(
     ` 
