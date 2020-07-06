@@ -1,6 +1,6 @@
 $("contact").append(
   `
-  <div class="container">
+  <div class="container" id="contact">
     <div class="row text-center">
       <div class="col-sm-12 mt-5 p-2">
       <ul class="list-inline">

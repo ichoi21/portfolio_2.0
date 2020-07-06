@@ -13,13 +13,13 @@ $(document).ready(function () {
 
     <ul class="nav flex-nowrap" id="nav-links">
       <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#about">about</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#portfolio">portfolio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="#contact">contact</a>
       </li>
     </ul>
   </nav>

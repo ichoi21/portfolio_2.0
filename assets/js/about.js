@@ -1,18 +1,21 @@
 $("about").append(
   `
-  <div class="container">
+  <div class="container" id="about">
     <div class="row">
       <div class="col-sm-12 mt-5 p-5 shadow-lg">
-      <p>.about</p>
+      <img src="./assets/img/iC_Avatar.png" id="about-circle"/>
+      <p>.about ian</p>
       <p>
-IAN is a mechanical engineer in the construction industry. 
-He works for a MEP contractor as a Director/Sr Project Manager overseeing the HVAC dept 
-while tackling both mechanical and plumbing projects in both the public and private sectors. 
-
-With his previous work experience and passionate strive on individual efficiency, 
-he's taking on this bootcamp program to better understand coding to which he can find ways to 
-maximize efficiency in the construction industry using coding development to coop better 
-ith technology not yet fully exposed to the industry.
+I am a Mechanical Engineer in the construction industry. 
+I am currently working at a MEP contractor as a Director/Sr Project Manager overseeing
+the HVAC dept while tackling both mechanical and plumbing projects in both the public 
+and private sectors. 
+<br>
+With my previous work experience and passionate strive on individual efficiency, 
+I've taken on a full stack boot-camp program to better understand coding in effort to find ways
+to expand alternate methods to maximize efficiencies in the construction industry.
+Coding development to untap areas where subcontractors lack technology not yet fully exposed to the industry 
+could be a potential game-changer on scaling, flexing, and adaptable operational capabilities. 
       </p>
       </div> 
     </div>
