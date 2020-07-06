@@ -1,6 +1,7 @@
 body {
   position: relative;
   background-color: rgb(164, 166, 168);
+  padding: 80px;
 }
 #logo {
   font-family: "Work Sans", sans-serif;
@@ -10,19 +11,12 @@ body {
   width: 40px;
 }
 
-#nav-links,
-#footer-container,
-.contact-info,
-.navigation-info,
-.about-me-info {
-  font-size: 14px;
+.nav-link {
+  color: black;
 }
 
-.nav-link,
-.contact-info,
-.navigation-info,
-.about-me-info {
-  color: black;
+.card {
+  min-height: 125px;
 }
 
 .contact-link {
@@ -30,9 +24,9 @@ body {
   display: block;
   height: 4rem;
   width: 4rem;
-  line-height: 4.3rem;
-  font-size: 3.5rem;
-  background-color: black;
+  line-height: 5.1rem;
+  font-size: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 10px 10px 0 rgba(34, 68, 54, 0.37);
 }
 .contact-logo {

@@ -12,7 +12,7 @@ $("contact").append(
         </a>
       </li>
       <li class="list-inline-item">
-      <a class="contact-link rounded-circle text-white mr-3"
+      <a class="contact-link rounded-circle text-white mr-3 text-center"
         href="https://www.illiest.com" target="blank">il
       </a>
     </li> 
