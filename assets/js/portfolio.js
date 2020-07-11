@@ -3,8 +3,8 @@ $("portfolio").append(
   <section class="content-section" id="portfolio">
   <div class="container">
     <div class="content-section-heading text-center">
-      <h3 class="text-secondary mb-0">Portfolio</h3>
-      <h2 class="mb-5">Recent Projects</h2>
+      <h3 class="text-secondary mt-3">Portfolio</h3>
+      <h5 class="mb-2">RECENT PROJECTS</h5>
     </div>
     <div class="row no-gutters">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -19,17 +19,17 @@ $("portfolio").append(
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <div class="hovereffect">
-        <img class="img-fluid" src="./assets/img/dayplanner_ex.png" alt="">
-        <div class="overlay">
-          <h2>Daily Planner - Organize yoursef!</h2>
-          <a class="portfolio-item" href="https://ichoi21.github.io/HWK05/" target="_blank">
+        <div class="hovereffect">
+          <img class="img-fluid" src="./assets/img/dayplanner_ex.png" alt="">
+          <div class="overlay">
+            <h2>Daily Planner - Organize yoursef!</h2>
+            <a class="portfolio-item" href="https://ichoi21.github.io/HWK05/" target="_blank">
             <p class="mb-0">DayPlaner on the GO!</p>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <div class="hovereffect">
           <img class="img-fluid" src="./assets/img/weatapp_ex.png" alt="">
           <div class="overlay">
@@ -41,16 +41,16 @@ $("portfolio").append(
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-      <div class="hovereffect">
-        <img class="img-fluid" src="./assets/img/illiest.png" alt="">
-        <div class="overlay">
-          <h2>ILLIEST</h2>
-          <a class="portfolio-item" href="https://www.illiest.com" target="_blank">
+        <div class="hovereffect">
+          <img class="img-fluid" src="./assets/img/illiest.png" alt="">
+          <div class="overlay">
+            <h2>ILLIEST</h2>
+            <a class="portfolio-item" href="https://www.illiest.com" target="_blank">
             <p class="mb-0">App that connects you with concepts using WIX for a side gig.</p>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </section>
