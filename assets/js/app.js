@@ -7,7 +7,7 @@ $(document).ready(function () {
     class="navbar navbar-light justify-content-md-between justify-content-center shadow-lg"
     id="top-nav">
     <a class="navbar-brand text-center rounded-circle shadow-lg"
-      href="https://ichoi21.github.io/portfolio_2.0/"
+      href=""
       id="logo">IC</a>
 
 
