@@ -1,7 +1,7 @@
 body {
   position: relative;
-  background-color: rgb(164, 166, 168);
-  padding: 80px;
+  background-color: rgb(96, 107, 119);
+  padding: 90px;
 }
 #logo {
   font-family: "Work Sans", sans-serif;
@@ -9,10 +9,6 @@ body {
   background-color: rgb(218, 16, 16);
   color: white;
   width: 40px;
-}
-
-.nav-link {
-  color: black;
 }
 
 .card {

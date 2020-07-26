@@ -1,28 +1,28 @@
 $(document).ready(function () {
   //header
-  $("header").append(
-    `    
-  <div class="container pb-5 fixed-top" id="nav-container">
-  <nav
-    class="navbar navbar-light justify-content-md-between justify-content-center shadow-lg"
-    id="top-nav">
-    <a class="navbar-brand text-center rounded-circle shadow-lg"
-      href=""
-      id="logo">IC</a>
-
-
-    <ul class="nav flex-nowrap" id="nav-links">
-      <li class="nav-item">
-        <a class="nav-link" href="#about">about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#portfolio">portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">contact</a>
-      </li>
-    </ul>
+  $("header").html(
+    `
+  <div class="container fixed-top" id="nav-container">
+  <nav>
+    <div class="nav-wrapper blue-grey lighten-1" style="padding: 5px">
+      <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
+      <a href="/" data-target="mobileNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="btn-flat" id="btnA">about</a></li>
+        <li><a class="btn-flat" id="btnP">portfolio</a></li>
+        <li><a class="btn-flat" id="btnC">contact</a></li>
+      </ul>
+    </div>
   </nav>
+
+  <ul class="sidenav deep-orange accent-1" id="mobileNav">
+    <div class="center-align" style="padding: 30px">
+      <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
+    </div>
+    <li><a class="btn-flat" id="btnA">about</a></li>
+    <li><a class="btn-flat" id="btnP">portfolio</a></li>
+    <li><a class="btn-flat" id="btnC">contact</a></li>
+  </ul>
   </div>
   `
   );
@@ -30,7 +30,7 @@ $(document).ready(function () {
   //widgets
   $("widgets").html(
     `    
-  <div class="container shadow-lg">
+  <div class="container z-depth-4">
       <div class="row text-center justify-content-md-center align-items-center" >
         <div class="card col-sm-4 m-2 center  bg-secondary text-light">
           <div id="dynamic-time"></div>
@@ -102,6 +102,12 @@ $(document).ready(function () {
       With the help of Gooogle, open source, and all other devs .. consolidated
       by i21. 2020.
     </h6>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/contact.js"></script>
     `
   );
+
+  //materialize activation for sidenav
+  $(".sidenav").sidenav();
 });

@@ -1,5 +1,8 @@
-$("portfolio").append(
-  `
+$(document).on("click", "#btnP", function (e) {
+  e.preventDefault();
+
+  $("article").html(
+    `
   <section class="content-section" id="portfolio">
   <div class="container">
     <div class="content-section-heading text-center">
@@ -55,4 +58,5 @@ $("portfolio").append(
   </div>
 </section>
 `
-);
+  );
+});
