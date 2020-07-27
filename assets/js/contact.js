@@ -4,14 +4,16 @@ $(document).on("click", "#btnC", function (e) {
     `
   <div class="container z-depth-4" id="contact">
     <div class="row center-align">
-    <h5 class="white-text">Contact Me</h5>
-    </div>
+      <div class="col-sm-12">
+    <h5 class="text-secondary center-align indigo">connect w. ian</h5>
+      </div>
+      </div>
     <div class="row center-align">
-      <div class="col-sm-12 mt-5 p-2">
+      <div class="col-sm-12 pb-2">
       <ul class="list-inline">
         <li class="list-inline-item hoverable circle">
         <a class="contact-logo rounded-circle white-text"
-          href="https://www.linkedin.com/in/ichoi21/" target="blank">
+          href="https://www.linkedin.com/in/ichoi21/" target="blank" alt="Linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
         </li>

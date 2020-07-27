@@ -99,7 +99,7 @@ $(document).ready(function () {
   $("footer").append(
     ` 
     <h6 class="footer text-center fixed-bottom small">
-      With the help of Gooogle, open source, and all other devs .. consolidated
+      With the help of Google, open source, and all other dev .. consolidated
       by i21. 2020.
     </h6>
     <script src="assets/js/about.js"></script>
@@ -108,6 +108,9 @@ $(document).ready(function () {
     `
   );
 
-  //materialize activation for sidenav
+  //materialize activation for sidenav, carousel
   $(".sidenav").sidenav();
+  $(".fixed-action-btn").floatingActionButton({ direction: "left" });
+  $(".carousel").carousel();
+  $(".tooltipped").tooltip();
 });
