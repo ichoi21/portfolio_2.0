@@ -8,6 +8,7 @@ $(document).ready(function () {
       <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
       <a href="/" data-target="mobileNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+        <li><b class="btn-flat white-text" id="dynamic-time"></b></li>
         <li><a class="btn-flat" id="btnA">about</a></li>
         <li><a class="btn-flat" id="btnP">portfolio</a></li>
         <li><a class="btn-flat" id="btnC">contact</a></li>
