@@ -61,39 +61,56 @@ $(document).ready(function () {
   autoTime();
   setInterval(autoTime, 1000);
 
-  //weather app
-  var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
-  if (window.navigator && window.navigator.geolocation) {
-    window.navigator.geolocation.getCurrentPosition(function (position) {
-      $.getJSON(openWeatherMap, {
-        lat: position.coords.latitude,
-        lon: position.coords.longitude,
-        units: "imperial",
-        APPID: "987370c9088242014b673e9c345ee3d9",
-      }).done(function (weather) {
-        // console.log(weather);
-        var res = weather;
-        var name = res.name;
-        var icon = res.weather[0].icon;
-        var weather = res.weather[0].description;
-        var temp = Math.floor(res.main.temp);
-        var humidity = res.main.humidity;
-        var windSpeed = res.wind.speed;
+  // //weather app - BETA
+  // var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
+  // var lat;
+  // var lon;
 
-        $("#cityName").text(name);
-        $("#icon").attr(
-          "src",
-          "http://openweathermap.org/img/wn/" + icon + ".png"
-        );
-        $("#weather").html("<b>Description: </b>" + weather);
-        $("#temperature").html("<b>Temperature: </b>" + temp + " °F");
-        $("#humidity").html("<b>Humidity: </b>" + humidity + "%");
-        $("#windSpeed").html("<b>Wind Speed: </b>" + windSpeed + " MPH");
-      });
-    });
-  }
+  // var question = confirm(
+  //   "Do you want this app to track your location? Ok for Yes , Cancel for No"
+  // );
+  // if (question === true) {
+  //   alert(
+  //     "This application will now track your location. Please go to your browser's setting and enable location."
+  //   );
+  //   getLocation();
+  // } else {
+  //   $("#info").text("Enter a city on the search box!");
+  //   $("#info2").text(
+  //     "Forget the weather person on your local cable network. Today, smartphone and web apps provide up-to-the-minute weather alerts and updates that can’t be found anywhere else."
+  //   );
+  // }
+  // if (window.navigator && window.navigator.geolocation) {
+  //   window.navigator.geolocation.getCurrentPosition(function (position) {
+  //     $.getJSON(openWeatherMap, {
+  //       lat: position.coords.latitude,
+  //       lon: position.coords.longitude,
+  //       units: "imperial",
+  //       APPID: "987370c9088242014b673e9c345ee3d9",
+  //     }).done(function (weather) {
+  //       // console.log(weather);
+  //       var res = weather;
+  //       var name = res.name;
+  //       var icon = res.weather[0].icon;
+  //       var weather = res.weather[0].description;
+  //       var temp = Math.floor(res.main.temp);
+  //       var humidity = res.main.humidity;
+  //       var windSpeed = res.wind.speed;
 
-  setInterval(weather, 300000);
+  //       $("#cityName").text(name);
+  //       $("#icon").attr(
+  //         "src",
+  //         "http://openweathermap.org/img/wn/" + icon + ".png"
+  //       );
+  //       $("#weather").html("<b>Description: </b>" + weather);
+  //       $("#temperature").html("<b>Temperature: </b>" + temp + " °F");
+  //       $("#humidity").html("<b>Humidity: </b>" + humidity + "%");
+  //       $("#windSpeed").html("<b>Wind Speed: </b>" + windSpeed + " MPH");
+  //     });
+  //   });
+  // }
+
+  // setInterval(weather, 300000);
 
   // footer
   $("footer").append(
@@ -111,6 +128,6 @@ $(document).ready(function () {
   //materialize activation for sidenav, carousel
   $(".sidenav").sidenav();
   $(".fixed-action-btn").floatingActionButton({ direction: "left" });
-  $(".carousel").carousel();
-  $(".tooltipped").tooltip();
+  // $(".carousel").carousel(); - currently not working properly
+  // $(".tooltipped").tooltip(); - idea in progress
 });
