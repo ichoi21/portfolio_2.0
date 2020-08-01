@@ -6,7 +6,7 @@ The idea of this repo is a personal portfolio for review and overall visual resu
 
 All skills acquired from this Berkeley Boot Camp Program will be displayed along with personal touches on this repo where it shows the evolving growth of becoming a full stack developer.
 
-## Team Members
+## Author
 
 - [Ian Choi](https://github.com/ichoi21)
 
