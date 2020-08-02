@@ -1,14 +1,6 @@
 body {
   position: relative;
   background-color: rgb(96, 107, 119);
-  padding: 90px;
-}
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
 }
 
 #logo {
@@ -51,4 +43,14 @@ a:visited {
   line-height: 4.3rem;
   font-size: 4rem;
   box-shadow: 0 10px 10px 0 rgba(34, 68, 54, 0.37);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+article {
+  flex: 1 0 auto;
 }

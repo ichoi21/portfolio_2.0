@@ -2,30 +2,29 @@ $(document).ready(function () {
   //header
   $("header").html(
     `
-  <div class="container fixed-top" id="nav-container">
-  <nav>
-    <div class="nav-wrapper blue-grey lighten-1" style="padding: 5px">
-      <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
-      <a href="/" data-target="mobileNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><b class="btn-flat white-text" id="dynamic-time"></b></li>
-        <li><a class="btn-flat" id="btnA">about</a></li>
-        <li><a class="btn-flat" id="btnP">portfolio</a></li>
-        <li><a class="btn-flat" id="btnC">contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <ul class="sidenav deep-orange accent-1" id="mobileNav">
-    <div class="center-align" style="padding: 30px">
-      <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
-    </div>
-    <li><a class="btn-flat" id="btnA">about</a></li>
-    <li><a class="btn-flat" id="btnP">portfolio</a></li>
-    <li><a class="btn-flat" id="btnC">contact</a></li>
-  </ul>
-  </div>
-  `
+    <nav>
+      <div class="nav-wrapper blue-grey lighten-1" style="padding: 5px">
+        <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
+        <a href="/" data-target="mobileNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><b class="btn-flat white-text" id="dynamic-time"></b></li>
+          <li><a class="btn-flat" id="btnA">about</a></li>
+          <li><a class="btn-flat" id="btnP">portfolio</a></li>
+          <li><a class="btn-flat" id="btnC">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav deep-orange accent-2" id="mobileNav">
+      <div class="center-align" style="padding: 30px">
+        <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
+      </div>
+      <li><a class="btn-flat waves-effect" id="btnA">about</a></li>
+      <li><a class="btn-flat waves-effect" id="btnP">portfolio</a></li>
+      <li><a class="btn-flat waves-effect" id="btnC">contact</a></li>
+    </ul>
+    `
   );
 
   //widgets
@@ -116,10 +115,10 @@ $(document).ready(function () {
   // footer
   $("footer").append(
     ` 
-    <h6 class="footer text-center fixed-bottom small">
+    <div class="page-footer center-align blue-grey lighten-2 z-depth-2 black-text">
       With the help of Google, open source, and all other dev .. consolidated
       by i21. 2020.
-    </h6>
+    </div>
     <script src="assets/js/about.js"></script>
     <script src="assets/js/portfolio.js"></script>
     <script src="assets/js/contact.js"></script>
@@ -129,6 +128,6 @@ $(document).ready(function () {
   //materialize activation for sidenav, carousel
   $(".sidenav").sidenav();
   $(".fixed-action-btn").floatingActionButton({ direction: "left" });
-  // $(".carousel").carousel(); - currently not working properly
+  $(".carousel").carousel();
   // $(".tooltipped").tooltip(); - idea in progress
 });
