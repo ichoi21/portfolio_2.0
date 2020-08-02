@@ -1,5 +1,6 @@
 $(document).on("click", "#btnC", function (e) {
   e.preventDefault();
+
   $("article").html(
     `
   <div class="container z-depth-4 white-text center-align" id="contact" style="padding: 25px;">

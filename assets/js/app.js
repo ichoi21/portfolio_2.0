@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     <nav>
       <div class="nav-wrapper blue-grey lighten-1" style="padding: 5px">
-        <a href="/" class="brand-logo btn-floating red darken-1 btn-large">ic</a>
+        <a href="/" class="brand-logo btn-floating red darken-1 btn-large no-uppercase">ic</a>
         <a href="/" data-target="mobileNav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><b class="btn-flat white-text" id="dynamic-time"></b></li>
