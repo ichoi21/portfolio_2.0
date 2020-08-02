@@ -129,5 +129,10 @@ $(document).ready(function () {
   $(".sidenav").sidenav();
   $(".fixed-action-btn").floatingActionButton({ direction: "left" });
   $(".carousel").carousel();
+  // autoplay();
+  // function autoplay() {
+  //   $(".carousel").carousel("next");
+  //   setTimeout(autoplay, 4500);
+  // }
   // $(".tooltipped").tooltip(); - idea in progress
 });

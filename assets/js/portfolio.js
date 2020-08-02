@@ -4,11 +4,11 @@ $(document).on("click", "#btnP", function (e) {
   $("article").html(
     `
     <div class="container z-depth-3" id="portfolio" style="padding: 25px;">
-      <div class="content-section-heading text-center">
+      <div class="text-center">
         <span class="badge white hoverable" style="font-size: 24px;">&nbsp;&nbsp;&nbsp;&nbsp;.portfolio</span>
         <h5 class="btn-flat">recent projects</h5>
       </div>
-      <div class="row">
+      <div class="row carousel">
         <div class="col s12 m4 l4 carousel-item">
           <div class="card small hoverable grey lighten-1">
             <div class="card-image waves-effect waves-block waves-light">
