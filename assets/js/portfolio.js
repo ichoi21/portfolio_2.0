@@ -9,7 +9,7 @@ $(document).on("click", "#btnP", function (e) {
         <h5 class="btn-flat">recent projects</h5>
       </div>
       <div class="row carousel">
-        <div class="col s12 m4 l4 carousel-item">
+        <div class="col s12 m6 l6 carousel-item">
           <div class="card small hoverable grey lighten-1">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" src="./assets/img/shoe_p2.png" />
@@ -37,7 +37,7 @@ $(document).on("click", "#btnP", function (e) {
             </div>
           </div>
         </div>
-          <div class="col s12 m4 l4 carousel-item">
+          <div class="col s12 m6 l6 carousel-item">
             <div class="card small hoverable grey lighten-1">
               <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="./assets/img/css_p1.png" />
@@ -79,7 +79,7 @@ $(document).on("click", "#btnP", function (e) {
               </div>
             </div>
           </div>
-          <div class="col s12 m4 l4 carousel-item">
+          <div class="col s12 m6 l6 carousel-item">
             <div class="card small hoverable grey lighten-1">
               <div
                 class="card-image waves-effect waves-block waves-light grey lighten-1"
@@ -171,4 +171,11 @@ $(document).on("click", "#btnP", function (e) {
     </div>
 `
   );
+
+  var slider = $(".carousel");
+  var fab = $(".fixed-action-btn");
+  slider.carousel();
+  fab.floatingActionButton({ direction: "left" });
+
+  slider.append("");
 });
