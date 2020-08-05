@@ -27,32 +27,6 @@ $(document).ready(function () {
     `
   );
 
-  //widgets
-  $("widgets").html(
-    `    
-  <div class="container z-depth-4">
-      <div class="row text-center justify-content-md-center align-items-center" >
-        <div class="card col-sm-4 m-2 center  bg-secondary text-light">
-          <div id="dynamic-time"></div>
-          <div>
-            <h3 class="font-weight-bold" id="cityName"></h3>
-            <div class="weatherImage">
-            <img id="icon" />
-          </div>
-        </div>
-      </div>
-      <div class="card col-sm-4 m-2 bg-secondary text-light">
-        <div class="pb-4" id="currentWeather">
-          <div id="weather"></div>
-          <div id="temperature"></div>
-          <div id="humidity"></div>
-          <div id="windSpeed"></div>
-        </div>
-      </div>
-  </div>
-  `
-  );
-
   //current time using moment.js
   var autoTime = function () {
     var currentDT = moment().format("llll");
@@ -62,55 +36,93 @@ $(document).ready(function () {
   setInterval(autoTime, 1000);
 
   // //weather app - BETA
-  // var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
-  // var lat;
-  // var lon;
+  var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
+  var lat;
+  var lon;
 
-  // var question = confirm(
-  //   "Do you want this app to track your location? Ok for Yes , Cancel for No"
-  // );
-  // if (question === true) {
-  //   alert(
-  //     "This application will now track your location. Please go to your browser's setting and enable location."
-  //   );
-  //   getLocation();
-  // } else {
-  //   $("#info").text("Enter a city on the search box!");
-  //   $("#info2").text(
-  //     "Forget the weather person on your local cable network. Today, smartphone and web apps provide up-to-the-minute weather alerts and updates that can’t be found anywhere else."
-  //   );
-  // }
-  // if (window.navigator && window.navigator.geolocation) {
-  //   window.navigator.geolocation.getCurrentPosition(function (position) {
-  //     $.getJSON(openWeatherMap, {
-  //       lat: position.coords.latitude,
-  //       lon: position.coords.longitude,
-  //       units: "imperial",
-  //       APPID: "987370c9088242014b673e9c345ee3d9",
-  //     }).done(function (weather) {
-  //       // console.log(weather);
-  //       var res = weather;
-  //       var name = res.name;
-  //       var icon = res.weather[0].icon;
-  //       var weather = res.weather[0].description;
-  //       var temp = Math.floor(res.main.temp);
-  //       var humidity = res.main.humidity;
-  //       var windSpeed = res.wind.speed;
+  var question = confirm(
+    "This app wants to track your location? Ok for Yes , Cancel for No"
+  );
+  if (question === true) {
+    // alert(
+    //   "This app will now track your location. Please go to your browser's setting and enable location."
+    // );
+    getLocation();
+  } else {
+    $("#weather").text(
+      "Forget the weather person on your local cable network. Today, smartphone and web apps provide up-to-the-minute weather alerts and updates that can’t be found anywhere else."
+    );
+  }
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(weather);
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+  function weather(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const units = "&units=imperial";
+    const APPID = "&appid=987370c90882420";
+    const code = "14b673e9c345ee3d9";
 
-  //       $("#cityName").text(name);
-  //       $("#icon").attr(
-  //         "src",
-  //         "http://openweathermap.org/img/wn/" + icon + ".png"
-  //       );
-  //       $("#weather").html("<b>Description: </b>" + weather);
-  //       $("#temperature").html("<b>Temperature: </b>" + temp + " °F");
-  //       $("#humidity").html("<b>Humidity: </b>" + humidity + "%");
-  //       $("#windSpeed").html("<b>Wind Speed: </b>" + windSpeed + " MPH");
-  //     });
-  //   });
-  // }
+    $.ajax({
+      url:
+        openWeatherMap + "?lat=" + lat + "&lon=" + lon + units + APPID + code,
+      type: "GET",
+      dataType: "json",
+      success: function (weather) {
+        // console.log(url);
+        console.log(weather);
+        var res = weather;
+        var name = res.name;
+        var icon = res.weather[0].icon;
+        var weather = res.weather[0].description;
+        var temp = Math.floor(res.main.temp);
+        var humidity = res.main.humidity;
+        var windSpeed = res.wind.speed;
 
-  // setInterval(weather, 300000);
+        $("#cityName").text(name);
+        $("#icon").attr(
+          "src",
+          "http://openweathermap.org/img/wn/" + icon + ".png"
+        );
+        $("#weather").html("<b>Description: </b>" + weather);
+        $("#temperature").html("<b>Temperature: </b>" + temp + " °F");
+        $("#humidity").html("<b>Humidity: </b>" + humidity + "%");
+        $("#windSpeed").html("<b>Wind Speed: </b>" + windSpeed + " MPH");
+      },
+    });
+  }
+
+  setInterval(weather, 300000);
+
+  //widgets
+  $("widgets").html(
+    `    
+  <div class="container z-depth-4">
+    <div class="row">
+      <div class="card small col s4 m5 l5 offset-m1 offset-l1 center" style="background-color: transparent;">
+        <div>
+          <h5 class="font-weight-bold" id="cityName"></h5>
+            <div class="weatherImage"><img id="icon" /></div>
+        </div>
+      </div>
+      <div class="card small col s4 m5 l5" style="background-color: transparent;">
+        <div class="pb-4" id="currentWeather">
+        <ul>
+          <li id="weather"></li>
+          <li id="temperature"></li>
+          <li id="humidity"></li>
+          <li id="windSpeed"></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+  );
 
   // footer
   $("footer").append(
