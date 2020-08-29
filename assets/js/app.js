@@ -36,7 +36,7 @@ $(document).ready(function () {
   setInterval(autoTime, 1000);
 
   // //weather app - BETA
-  var openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
+  var openWeatherMap = "https://api.openweathermap.org/data/2.5/weather";
   var lat;
   var lon;
 
