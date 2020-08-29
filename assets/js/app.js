@@ -43,12 +43,11 @@ $(document).ready(function () {
   var question = confirm(
     "This app wants to track your location? Ok for Yes , Cancel for No"
   );
-  if (question === true) {
-    // alert(
-    //   "This app will now track your location. Please go to your browser's setting and enable location."
-    // );
+  if (location.protocol === "http:") {
+    openWeatherMap = "http://api.openweathermap.org/data/2.5/weather";
     getLocation();
   } else {
+    openWeatherMap = "https://api.openweathermap.org/data/2.5/weather";
     $("#weather").text(
       "Forget the weather person on your local cable network. Today, smartphone and web apps provide up-to-the-minute weather alerts and updates that can’t be found anywhere else."
     );
@@ -86,7 +85,7 @@ $(document).ready(function () {
         $("#cityName").text(name);
         $("#icon").attr(
           "src",
-          "http://openweathermap.org/img/wn/" + icon + ".png"
+          "https://openweathermap.org/img/wn/" + icon + ".png"
         );
         $("#weather").html("<b>Description: </b>" + weather);
         $("#temperature").html("<b>Temperature: </b>" + temp + " °F");
@@ -103,13 +102,13 @@ $(document).ready(function () {
     `    
   <div class="container z-depth-4">
     <div class="row">
-      <div class="card small col s4 m5 l5 offset-m1 offset-l1 center" style="background-color: transparent;">
+      <div class="card col s4 m5 l5 offset-m1 offset-l1 center" style="background-color: transparent;">
         <div>
           <h5 class="font-weight-bold" id="cityName"></h5>
             <div class="weatherImage"><img id="icon" /></div>
         </div>
       </div>
-      <div class="card small col s4 m5 l5" style="background-color: transparent;">
+      <div class="card col s4 m5 l5" style="background-color: transparent;">
         <div class="pb-4" id="currentWeather">
         <ul>
           <li id="weather"></li>
